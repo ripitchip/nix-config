@@ -7,9 +7,9 @@
 {
 
   options = {
-    nvim.harpoon.enable = lib.mkEnableOption "enables harpoon in neovim";
+    nvim.cloak.enable = lib.mkEnableOption "enables cloak in neovim";
   };
-  config = lib.mkIf (config.nvim.enable && config.nvim.harpoon.enable) {
+  config = lib.mkIf (config.nvim.enable && config.nvim.cloak.enable) {
 
     programs.neovim =
       let
