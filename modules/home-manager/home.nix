@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   home.username = "thomas";
@@ -6,7 +11,6 @@
 
   # Enable unfree packages
   nixpkgs.config.allowUnfree = true;
-
 
   # Import additional modules
   imports = [
@@ -29,6 +33,7 @@
   firefox.enable = true;
   sound-utils.enable = true;
   nvim.enable = true;
+  lazygit.enable = true;
 
   # Let Home Manager manage itself
   programs.home-manager.enable = true;
@@ -36,4 +41,3 @@
   # Set Home Manager state version
   home.stateVersion = "24.05"; # Update this with caution when upgrading Home Manager.
 }
-

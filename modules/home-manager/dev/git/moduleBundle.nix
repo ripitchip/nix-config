@@ -1,5 +1,12 @@
-{ pkgs, lib, config, ... }: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
   imports = [
     ./git.nix
+    ./lazygit.nix
   ];
 }
