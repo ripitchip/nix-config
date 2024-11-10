@@ -7,9 +7,9 @@
 {
 
   options = {
-    nvim.harpoon.enable = lib.mkEnableOption "enables harpoon in neovim";
+    nvim.db.enable = lib.mkEnableOption "enables db in neovim";
   };
-  config = lib.mkIf (config.nvim.enable && config.nvim.harpoon.enable) {
+  config = lib.mkIf (config.nvim.enable && config.nvim.db.enable) {
 
     programs.neovim =
       let
@@ -26,14 +26,9 @@
       in
       {
         plugins = with pkgs-unstable.vimPlugins; [
-          {
-            plugin = cloak-nvim;
-            config = toLuaFile ./cloak.lua;
-          }
+          vim-dadbod
+          vim-dadbod-ui
         ];
-        extraLuaConfig = ''
-          ${builtins.readFile ./keymap.lua}
-        '';
       };
   };
 }
