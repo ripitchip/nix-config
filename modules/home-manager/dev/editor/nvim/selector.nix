@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}:
+{ ... }:
 {
   nvim.telescope.enable = true;
   nvim.harpoon.enable = true;

@@ -1,7 +1,15 @@
-{ pkgs, lib, config, ... }: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
 
-    home.packages = with pkgs; [
-      # format
-      nixfmt-rfc-style
-    ];
+  home.packages = with pkgs; [
+    # format
+    nixfmt-rfc-style
+    # lsp
+    nil
+  ];
 }
