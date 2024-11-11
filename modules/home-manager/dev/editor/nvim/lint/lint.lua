@@ -5,14 +5,14 @@ local function get_file_name()
 end
 
 lint.linters_by_ft = {
-	-- python = { "ruff" },
+	python = { "ruff" },
 	c = { "cpplint" },
 	javascript = { "eslint_d" },
 	typescript = { "eslint_d" },
 	javascriptreact = { "eslint_d" },
 	typescriptreact = { "eslint_d" },
 	svelte = { "eslint_d" },
-    nix = {"nix"},
+	nix = { "nix" },
 }
 
 local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
