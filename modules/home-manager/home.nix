@@ -18,7 +18,7 @@
   # Session variables
   home.sessionVariables = {
     # Uncomment and set your default editor
-    # EDITOR = "nvim";
+    EDITOR = "nvim";
   };
 
   # Enable various applications and utilities
