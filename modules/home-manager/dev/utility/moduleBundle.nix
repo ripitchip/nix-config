@@ -5,5 +5,6 @@
     ./selector.nix
     ./neofetch.nix
     ./acpi.nix
+    ./vagrant.nix
   ];
 }
