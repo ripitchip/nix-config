@@ -60,7 +60,7 @@ lspconfig.rust_analyzer.setup({
 -- lspconfig.pylsp.setup({
 -- 	on_attach = on_attach,
 -- })
-lspconfig.jedi_language_server.setup{}
+lspconfig.jedi_language_server.setup({})
 lspconfig.nil_ls.setup({
 	on_attach = on_attach,
 })
