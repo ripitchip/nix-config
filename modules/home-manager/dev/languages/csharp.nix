@@ -11,9 +11,6 @@
   };
 
   config = lib.mkIf config.csharp.enable {
-    home.packages = with pkgs.dotnetCorePackages; [
-      sdk_9_0
-      csharpier
-    ];
+    home.packages = (with pkgs.dotnetCorePackages; [ sdk_9_0 ]) ++ (with pkgs; [ csharpier ]);
   };
 }
