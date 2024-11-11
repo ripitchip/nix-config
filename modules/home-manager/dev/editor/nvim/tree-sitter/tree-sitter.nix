@@ -12,6 +12,7 @@
   };
   config = lib.mkIf (config.nvim.enable && config.nvim.tree-sitter.enable) {
 
+    home.packages = with pkgs; [ tree-sitter ];
     programs.neovim =
       let
         toLua = str: ''
