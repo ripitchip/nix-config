@@ -11,14 +11,16 @@
   };
 
   config = lib.mkIf config.lua.enable {
-    home.packages = with pkgs; [
-      lua
-
-      # lsp
-      luajitPackages.lua-lsp
-      luajitPackages.luasnip
-      jsregexp # Needed with luasnip
-      stylua
-    ];
+    home.packages =
+      with pkgs;
+      [
+        lua
+        stylua
+      ]
+      ++ (with pkgs.luajitPackages; [
+        lua-lsp
+        luasnip
+        jsregexp
+      ]);
   };
 }
