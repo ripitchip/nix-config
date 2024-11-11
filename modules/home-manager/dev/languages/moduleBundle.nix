@@ -6,6 +6,8 @@
     ./nix.nix
     ./latex.nix
     ./cpp.nix
+    ./node.nix
+
     ./selector.nix
   ];
 }
