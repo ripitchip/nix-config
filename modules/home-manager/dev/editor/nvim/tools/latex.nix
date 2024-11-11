@@ -13,9 +13,9 @@
 
     programs.neovim = {
       plugins = with pkgs-unstable.vimPlugins; [ vimtex ];
+      extraLuaConfig = ''
+        ${builtins.readFile ./latex.lua}
+      '';
     };
-    extraLuaConfig = ''
-      ${builtins.readFile ./nvim-config/latex.lua}
-    '';
   };
 }

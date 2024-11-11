@@ -10,5 +10,10 @@
     latex.enable = lib.mkEnableOption "enable latex";
   };
 
-  config = lib.mkIf config.latex.enable { home.packages = with pkgs; [ texliveSmall ]; };
+  config = lib.mkIf config.latex.enable {
+    home.packages = with pkgs; [
+      texliveFull
+      python311Packages.pygments
+    ];
+  };
 }
