@@ -13,7 +13,7 @@
   config = lib.mkIf config.mpd.enable {
     services.mpd = {
       enable = true;
-      musicDirectory = "~/music/";
+      musicDirectory = "/home/thomas/music/";
       extraConfig = ''
         audio_output {
           type            "pipewire"
@@ -22,7 +22,7 @@
 
       '';
     };
-    environment.systemPackages = with pkgs; [
+    home.packages = with pkgs; [
       mpc-cli
       ncmpcpp
     ];
