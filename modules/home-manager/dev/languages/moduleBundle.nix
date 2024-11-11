@@ -8,6 +8,7 @@
     ./cpp.nix
     ./node.nix
     ./rust.nix
+    ./csharp.nix
 
     ./selector.nix
   ];
