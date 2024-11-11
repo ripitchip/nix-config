@@ -1,6 +1,14 @@
-{ pkgs, lib, config, ... }: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
 
-  options = { lua.enable = lib.mkEnableOption "enable lua"; };
+  options = {
+    lua.enable = lib.mkEnableOption "enable lua";
+  };
 
   config = lib.mkIf config.lua.enable {
     home.packages = with pkgs; [
@@ -9,6 +17,7 @@
       # lsp
       luajitPackages.lua-lsp
       luajitPackages.luasnip
+      stylua
     ];
   };
 }
