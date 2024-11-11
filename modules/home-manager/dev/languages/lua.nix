@@ -17,6 +17,7 @@
       # lsp
       luajitPackages.lua-lsp
       luajitPackages.luasnip
+      jsregexp # Needed with luasnip
       stylua
     ];
   };
