@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}:
+{ ... }:
 
 {
   inkscape.enable = true;

@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ ... }:
 
 {
   home.username = "thomas";
@@ -27,13 +22,8 @@
   };
 
   # Enable various applications and utilities
-  signal.enable = true;
-  discord.enable = true;
   st.enable = true;
-  firefox.enable = true;
-  sound-utils.enable = true;
   nvim.enable = true;
-  lazygit.enable = true;
 
   # Let Home Manager manage itself
   programs.home-manager.enable = true;

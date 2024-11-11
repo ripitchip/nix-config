@@ -1,0 +1,4 @@
+{ ... }:
+{
+  lazygit.enable = true;
+}

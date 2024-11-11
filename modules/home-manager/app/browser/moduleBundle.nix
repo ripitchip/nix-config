@@ -1,5 +1,7 @@
-{ pkgs, lib, config, ... }: {
+{ ... }:
+{
   imports = [
     ./firefox.nix
+    ./selector.nix
   ];
 }
