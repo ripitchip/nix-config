@@ -1,7 +1,13 @@
-{ config, pkgs, pkgs-unstable, ... }:
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
 
 {
-  imports = [ # Include the results of the hardware scan.
+  imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./modules/nixos/modules.nix
   ];
@@ -22,15 +28,13 @@
 
   i18n.extraLocaleSettings = {
     lc_address = "en_US.utf-8"; # Use US locale for address formatting
-    lc_identification =
-      "en_US.utf-8"; # Use US locale for identification formatting
+    lc_identification = "en_US.utf-8"; # Use US locale for identification formatting
     lc_measurement = "en_US.utf-8"; # Use US locale for measurement formatting
     lc_monetary = "en_US.utf-8"; # Use US locale for monetary formatting
     lc_name = "en_US.utf-8"; # Use US locale for name formatting
     lc_numeric = "en_US.utf-8"; # Use US locale for numeric formatting
     lc_paper = "en_US.utf-8"; # Use US locale for paper size (e.g., letter)
-    lc_telephone =
-      "en_US.utf-8"; # Use US locale for telephone number formatting
+    lc_telephone = "en_US.utf-8"; # Use US locale for telephone number formatting
     lc_time = "en_US.utf-8"; # Use US locale for time formatting
   };
 
@@ -43,24 +47,26 @@
   users.users.thomas = {
     isNormalUser = true;
     description = "thomas";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
   };
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = (with pkgs;
-    [
-      git
-    ])
-    ++
-    (with pkgs-unstable;
-    []
-    );
-  dwm.enable=true;
-  WM.enable=true;
-  pipewire.enable=true;
-  
+  environment.systemPackages = (with pkgs; [ git ]) ++ (with pkgs-unstable; [ ]);
+  dwm.enable = true;
+  WM.enable = true;
+  pipewire.enable = true;
+  hardware.opengl = {
+    enable = true;
+  };
+
   system.stateVersion = "24.05"; # Did you read the comment?
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
 }
