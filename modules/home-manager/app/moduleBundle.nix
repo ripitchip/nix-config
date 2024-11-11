@@ -1,4 +1,5 @@
-{ pkgs, lib, config, ... }: {
+{ ... }:
+{
   imports = [
     ./social/moduleBundle.nix
     ./browser/moduleBundle.nix
