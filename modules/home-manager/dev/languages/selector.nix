@@ -1,4 +1,5 @@
-{ pkgs, lib, config, ... }: {
-    python.enable=true;
-    lua.enable=true;
+{ ... }:
+{
+  python.enable = true;
+  lua.enable = true;
 }

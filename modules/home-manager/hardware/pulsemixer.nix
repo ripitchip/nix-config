@@ -1,10 +1,13 @@
-{ pkgs, lib, config,... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
-  options = { sound-utils.enable = lib.mkEnableOption "enables sound packages like pulsemixer"; };
-  config = lib.mkIf config.sound-utils.enable {
-    home.packages = with pkgs; [
-    	pulsemixer
-    ];
+  options = {
+    pulsemixer.enable = lib.mkEnableOption "enables pulsemixer to control sound";
   };
+  config = lib.mkIf config.pulsemixer.enable { home.packages = with pkgs; [ pulsemixer ]; };
 }
