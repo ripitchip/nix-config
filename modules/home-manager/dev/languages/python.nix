@@ -1,6 +1,14 @@
-{ pkgs, lib, config, ... }: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
 
-  options = { python.enable = lib.mkEnableOption "enable python"; };
+  options = {
+    python.enable = lib.mkEnableOption "enable python";
+  };
 
   config = lib.mkIf config.python.enable {
     home.packages = with pkgs; [
@@ -8,6 +16,7 @@
 
       # Formatter
       ruff
+      black
       # Lsp
       python311Packages.python-lsp-server
       python311Packages.jedi-language-server
