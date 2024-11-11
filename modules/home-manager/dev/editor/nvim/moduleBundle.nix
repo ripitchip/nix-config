@@ -20,6 +20,7 @@
     ./tools/latex.nix
     ./tools/wiki.nix
     ./tools/lazygit.nix
+    ./tools/theme.nix
 
     # Must stay at the very bottom
     ./nvim.nix

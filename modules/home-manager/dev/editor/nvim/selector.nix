@@ -12,4 +12,5 @@
   nvim.selector.enable = true;
   nvim.latex.enable = true;
   nvim.wiki.enable = true;
+  nvim.theme.enable = true;
 }
