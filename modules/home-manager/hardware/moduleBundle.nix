@@ -1,5 +1,7 @@
-{ pkgs, lib, config, ... }: {
+{ ... }:
+{
   imports = [
-	./sound/moduleBundle.nix
+    ./pulsemixer.nix
+    ./brightnessctl.nix
   ];
 }
