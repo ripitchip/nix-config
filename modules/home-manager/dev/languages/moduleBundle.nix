@@ -7,6 +7,7 @@
     ./latex.nix
     ./cpp.nix
     ./node.nix
+    ./rust.nix
 
     ./selector.nix
   ];

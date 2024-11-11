@@ -5,4 +5,5 @@
   latex.enable = true;
   cpp.enable = true;
   node.enable = true;
+  rust.enable = true;
 }
