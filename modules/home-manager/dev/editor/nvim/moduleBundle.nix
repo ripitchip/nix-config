@@ -18,6 +18,8 @@
     ./tools/trouble.nix
     ./tools/selector.nix
     ./tools/latex.nix
+    ./tools/wiki.nix
+    ./tools/lazygit.nix
 
     # Must stay at the very bottom
     ./nvim.nix
