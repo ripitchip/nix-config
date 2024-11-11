@@ -16,6 +16,8 @@
     ./cloak/cloak.nix
     ./db/db.nix
     ./tools/trouble.nix
+    ./tools/selector.nix
+    ./tools/latex.nix
 
     # Must stay at the very bottom
     ./nvim.nix

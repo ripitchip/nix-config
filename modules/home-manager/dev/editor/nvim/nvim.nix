@@ -65,9 +65,6 @@
 
           # lazygit-nvim
           # markdown-preview-nvim
-          # trouble-nvim
-
-          # vim-visual-multi
 
         ];
 

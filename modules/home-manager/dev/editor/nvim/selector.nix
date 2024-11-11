@@ -9,4 +9,6 @@
   nvim.cloak.enable = true;
   nvim.db.enable = true;
   nvim.trouble.enable = true;
+  nvim.selector.enable = true;
+  nvim.latex.enable = true;
 }
