@@ -17,6 +17,7 @@
       # Formatter
       ruff
       black
+
       # Lsp
       python311Packages.python-lsp-server
       python311Packages.jedi-language-server
