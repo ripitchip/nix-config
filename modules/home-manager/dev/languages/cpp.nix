@@ -10,5 +10,5 @@
     cpp.enable = lib.mkEnableOption "enable cpp";
   };
 
-  config = lib.mkIf config.cpp.enable { home.packages = with pkgs; [ gcc ]; };
+  config = lib.mkIf config.cpp.enable { home.packages = with pkgs; [ gcc14 ]; };
 }
