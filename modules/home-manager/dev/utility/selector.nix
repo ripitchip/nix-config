@@ -1,0 +1,4 @@
+{ ... }:
+{
+  lshw.enable = true;
+}
