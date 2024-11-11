@@ -6,7 +6,6 @@
   ...
 }:
 {
-
   options = {
     nvim.enable = lib.mkEnableOption "enables neovim";
   };
@@ -48,16 +47,9 @@
           # catppuccin-vim
           # kanagawa-nvim
           # {
-          #   plugin = cloak-nvim;
-          #   config = toLuaFile ./nvim-config/plugin/cloak.lua;
-          # }
-          # {
           #   plugin = nvim-autopairs;
           #   config = toLua ''require("nvim-autopairs").setup()'';
           # }
-          #
-          # vim-dadbod
-          # vim-dadbod-ui
 
           # {
           #   plugin = copilot-vim;
@@ -83,6 +75,7 @@
           ${builtins.readFile ./nvim-config/remap.lua}
           ${builtins.readFile ./nvim-config/set.lua}
         '';
+
       };
   };
 }
