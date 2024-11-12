@@ -29,20 +29,7 @@
       {
         plugins = with pkgs-unstable.vimPlugins; [
           {
-            plugin = (
-              nvim-treesitter.withPlugins (p: [
-                p.tree-sitter-nix
-                p.tree-sitter-vim
-                p.tree-sitter-bash
-                p.tree-sitter-markdown
-                p.tree-sitter-vimdoc
-                p.tree-sitter-lua
-                p.tree-sitter-python
-                p.tree-sitter-json
-                p.tree-sitter-rust
-                p.tree-sitter-markdown
-              ])
-            );
+            plugin = nvim-treesitter.withAllGrammars;
             config = toLuaFile ./treesitter.lua;
           }
 
