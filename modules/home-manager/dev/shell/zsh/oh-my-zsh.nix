@@ -34,6 +34,8 @@
         "navi"
         "rust"
         "tmuxinator"
+        "zsh-lsd"
+
       ];
       theme = "cat";
     };
