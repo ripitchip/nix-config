@@ -6,5 +6,6 @@
     ./editor/moduleBundle.nix
     ./languages
     ./utility
+    ./shell
   ];
 }
