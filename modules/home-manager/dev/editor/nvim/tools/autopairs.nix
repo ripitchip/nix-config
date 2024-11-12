@@ -11,15 +11,23 @@
   };
   config = lib.mkIf (config.nvim.enable && config.nvim.autopairs.enable) {
 
-    programs.neovim = {
-      plugins = with pkgs-unstable.vimPlugins; [
-        mini-nvim
-        {
-          plugin = nvim-autopairs;
-          config = toLua ''require("nvim-autopairs").setup()'';
-        }
-      ];
-      extraLuaConfig = '''';
-    };
+    programs.neovim =
+      let
+        toLua = str: ''
+          lua << EOF
+          ${str}
+          EOF
+        '';
+      in
+      {
+        plugins = with pkgs-unstable.vimPlugins; [
+          mini-nvim
+          {
+            plugin = nvim-autopairs;
+            config = toLua ''require("nvim-autopairs").setup()'';
+          }
+        ];
+        extraLuaConfig = '''';
+      };
   };
 }
