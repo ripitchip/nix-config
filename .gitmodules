@@ -1,0 +1,27 @@
+[submodule "modules/home-manager/dev/shell/zsh/plugins/fzf-zsh-plugin"]
+	path = modules/home-manager/dev/shell/zsh/plugins/fzf-zsh-plugin
+	url = https://github.com/unixorn/fzf-zsh-plugin.git
+[submodule "modules/home-manager/dev/shell/zsh/plugins/zsh-autopair"]
+	path = modules/home-manager/dev/shell/zsh/plugins/zsh-autopair
+	url = https://github.com/hlissner/zsh-autopair
+[submodule "modules/home-manager/dev/shell/zsh/plugins/zsh-autosuggestions"]
+	path = modules/home-manager/dev/shell/zsh/plugins/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
+[submodule "modules/home-manager/dev/shell/zsh/plugins/zsh-completions"]
+	path = modules/home-manager/dev/shell/zsh/plugins/zsh-completions
+	url = git@github.com:zsh-users/zsh-completions
+[submodule "modules/home-manager/dev/shell/zsh/plugins/zsh-lsd"]
+	path = modules/home-manager/dev/shell/zsh/plugins/zsh-lsd
+	url = git@github.com:wintermi/zsh-lsd.git
+[submodule "modules/home-manager/dev/shell/zsh/plugins/zsh-syntax-highlighting"]
+	path = modules/home-manager/dev/shell/zsh/plugins/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule "modules/home-manager/dev/shell/zsh/plugins/you-should-use"]
+	path = modules/home-manager/dev/shell/zsh/plugins/you-should-use
+	url = git@github.com:MichaelAquilina/zsh-you-should-use.git
+[submodule "modules/home-manager/dev/shell/zsh/plugins/conda-zsh-completion"]
+	path = modules/home-manager/dev/shell/zsh/plugins/conda-zsh-completion
+	url = git@github.com:conda-incubator/conda-zsh-completion.git
+[submodule "modules/home-manager/dev/shell/zsh/plugins/zsh-autocomplete"]
+	path = modules/home-manager/dev/shell/zsh/plugins/zsh-autocomplete
+	url = git@github.com:marlonrichert/zsh-autocomplete.git
