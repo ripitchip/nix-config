@@ -6,5 +6,6 @@
     ./neofetch.nix
     ./acpi.nix
     ./vagrant.nix
+    ./lsd.nix
   ];
 }
