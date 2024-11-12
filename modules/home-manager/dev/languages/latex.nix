@@ -13,6 +13,7 @@
   config = lib.mkIf config.latex.enable {
     home.packages = with pkgs; [
       texliveFull
+      python311Packages.pylatexenc
       python311Packages.pygments
     ];
   };
