@@ -24,10 +24,10 @@
           mini-nvim
           {
             plugin = render-markdown-nvim;
-            config = toLua ''require('render-markdown').setup({})'';
+            config = toLua ''require('render-markdown').setup({file_types = { 'markdown', 'vimwiki' },})'';
           }
         ];
-        extraLuaConfig = '''';
+        extraLuaConfig = ''vim.treesitter.language.register('markdown', 'vimwiki')'';
       };
   };
 }
