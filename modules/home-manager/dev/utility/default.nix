@@ -7,5 +7,7 @@
     ./acpi.nix
     ./vagrant.nix
     ./lsd.nix
+    ./zoxide.nix
+    ./fzf.nix
   ];
 }
