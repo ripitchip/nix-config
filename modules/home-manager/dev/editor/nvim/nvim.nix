@@ -44,26 +44,12 @@
             plugin = comment-nvim;
             config = toLua ''require("Comment").setup()'';
           }
-          # catppuccin-vim
-          # kanagawa-nvim
-          # {
-          #   plugin = nvim-autopairs;
-          #   config = toLua ''require("nvim-autopairs").setup()'';
-          # }
 
           # {
           #   plugin = copilot-vim;
           #   config = toLua "vim.g.copilot_enabled = 0";
           # }
 
-          # {
-          #   plugin = nvim-lint;
-          #   config = toLuaFile ./nvim-config/plugin/lint.lua;
-          # }
-
-          # vimtex
-
-          # lazygit-nvim
           # markdown-preview-nvim
 
         ];

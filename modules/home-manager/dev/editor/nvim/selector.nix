@@ -13,4 +13,6 @@
   nvim.latex.enable = true;
   nvim.wiki.enable = true;
   nvim.theme.enable = true;
+  nvim.autopairs.enable = true;
+  nvim.markdown.enable = true;
 }

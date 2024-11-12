@@ -21,6 +21,8 @@
     ./tools/wiki.nix
     ./tools/lazygit.nix
     ./tools/theme.nix
+    ./tools/markdown.nix
+    ./tools/autopairs.nix
 
     # Must stay at the very bottom
     ./nvim.nix
