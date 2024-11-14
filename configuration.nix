@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  pkgs-unstable,
-  ...
-}:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -11,7 +6,6 @@
     ./hardware-configuration.nix
     ./modules/nixos/modules.nix
   ];
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -44,24 +38,28 @@
     variant = "intl";
   };
 
+  programs.zsh.enable = true;
   users.users.thomas = {
     isNormalUser = true;
     description = "thomas";
+    shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"
+      "vboxusers"
+      "docker"
+      "dialout"
     ];
   };
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = (with pkgs; [ git ]) ++ (with pkgs-unstable; [ ]);
   dwm.enable = true;
   WM.enable = true;
   pipewire.enable = true;
-  hardware.opengl = {
-    enable = true;
-  };
+  # hardware.opengl = {
+  #   enable = true;
+  # };
 
   system.stateVersion = "24.05"; # Did you read the comment?
   nix.settings.experimental-features = [
