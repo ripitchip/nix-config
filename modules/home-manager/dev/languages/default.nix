@@ -10,6 +10,7 @@
     ./rust.nix
     ./csharp.nix
     ./arduino.nix
+    ./markdown.nix
 
     ./selector.nix
   ];
