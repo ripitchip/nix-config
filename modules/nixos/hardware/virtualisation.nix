@@ -2,16 +2,14 @@
 
 {
   # Enable virtualbox.
-  virtualisation.virtualbox.guest.enable = true;
-  virtualisation.virtualbox.guest.draganddrop = true;
-  virtualisation.virtualbox.guest.clipboard = true;
-  virtualisation.virtualbox.guest.seamless = true;
+  virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.virtualbox.host.enableHardening = false;
+  virtualisation.virtualbox.guest.enable = true;
   environment.systemPackages = with pkgs; [ virtualbox ];
-
-  boot.kernelModules = [
-    "vboxdrv"
-    "vboxnetadp"
-    "vboxnetflt"
-  ];
+  virtualisation.docker.enable = true;
+  environment.etc."vbox/networks.conf".text = ''
+    * 0.0.0.0/0 ::/0
+  '';
+  networking.firewall.enable = false;
 }
