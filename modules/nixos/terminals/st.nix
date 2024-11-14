@@ -1,6 +1,14 @@
-{ pkgs, lib, config, ... }: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
 
-  options = { st.enable = lib.mkEnableOption "enables st"; };
+  options = {
+    st.enable = lib.mkEnableOption "enables st";
+  };
 
   config = lib.mkIf config.st.enable {
     environment.systemPackages = with pkgs; [
