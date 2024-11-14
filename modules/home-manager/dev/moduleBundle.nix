@@ -7,5 +7,6 @@
     ./languages
     ./utility
     ./shell
+    ./framework
   ];
 }
