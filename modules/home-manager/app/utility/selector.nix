@@ -1,0 +1,5 @@
+{ ... }:
+
+{
+  flameshot.enable = true;
+}

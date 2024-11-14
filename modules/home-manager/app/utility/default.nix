@@ -1,4 +1,7 @@
 { ... }:
 {
-  imports = [ ./capture ];
+  imports = [
+    ./capture
+    ./selector.nix
+  ];
 }
