@@ -1,11 +1,8 @@
-{ ... }:
+{ config, ... }:
 
 {
   home.username = "thomas";
   home.homeDirectory = "/home/thomas";
-
-  # Enable unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # Import additional modules
   imports = [
@@ -15,10 +12,12 @@
     ./dev/moduleBundle.nix
   ];
 
-  # Session variables
   home.sessionVariables = {
     # Uncomment and set your default editor
     EDITOR = "nvim";
+    # Set XDG_DATA_HOME
+    XDG_DATA_HOME = "/home/thomas/.local/share";
+    XDG_CONFIG_HOME = "/home/thomas/.config";
   };
 
   # Enable various applications and utilities
