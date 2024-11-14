@@ -8,7 +8,7 @@
   imports = [
     ./app/moduleBundle.nix
     ./local/moduleBundle.nix
-    ./hardware/moduleBundle.nix
+    ./hardware
     ./dev/moduleBundle.nix
   ];
 
