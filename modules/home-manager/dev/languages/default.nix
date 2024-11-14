@@ -9,6 +9,7 @@
     ./node.nix
     ./rust.nix
     ./csharp.nix
+    ./arduino.nix
 
     ./selector.nix
   ];

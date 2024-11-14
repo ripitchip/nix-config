@@ -7,4 +7,5 @@
   node.enable = true;
   rust.enable = true;
   csharp.enable = true;
+  arduino.enable = true;
 }
