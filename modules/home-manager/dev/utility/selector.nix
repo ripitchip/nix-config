@@ -6,4 +6,5 @@
   vagrant.enable = true;
   zoxide.enable = true;
   fzf.enable = true;
+  steam-run.enable = true;
 }

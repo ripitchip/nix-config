@@ -9,5 +9,6 @@
     ./lsd.nix
     ./zoxide.nix
     ./fzf.nix
+    ./steam-run.nix
   ];
 }
