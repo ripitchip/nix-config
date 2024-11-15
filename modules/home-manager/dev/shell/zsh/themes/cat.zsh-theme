@@ -1,105 +1,84 @@
-# Slavic Theme for Zsh, forked and adapted from Toaster theme
+# Define Color Codes
+colorOrange='%F{208}'  # FD971F
+colorBlue='%F{81}'     # 6EC9DD
+colorGreen='%F{118}'   # A6E22E
+colorYellow='%F{222}'  # E6DB7E
+colorPink='%F{199}'    # F92672
+colorGrey='%F{240}'    # 554F48
+colorWhite='%F{15}'    # F1F1F1
+colorPurple='%F{141}'  # 9458FF
+colorLilac='%F{183}'   # AE81FF
+colorReset='%f'
+userSymbol='⫸'
 
-# Define colors
-__slavic_color_orange="%F{214}"
-__slavic_color_blue="%F{81}"
-__slavic_color_green="%F{46}"
-__slavic_color_yellow="%F{229}"
-__slavic_color_pink="%F{197}"
-__slavic_color_grey="%F{237}"
-__slavic_color_white="%F{255}"
-__slavic_color_purple="%F{141}"
-__slavic_color_lilac="%F{183}"
-
-# Function to print colored text
-__slavic_color_echo() {
-  echo -n "${1}${2}%f"
+# Function to print text with a specified color
+printWithColor() {
+  echo -n "${1}${2}${colorReset}"
 }
 
-# Function to get current folder
-__slavic_current_folder() {
-  if [[ "$PWD" == "/" ]]; then
-    echo -n "/"
-  else
-    basename "$PWD"
-  fi
+# Function to get the current directory name
+getCurrentFolderName() {
+  [[ $PWD == '/' ]] && echo '/' || basename "$PWD"
 }
 
-# Function to get git status codes
-__slavic_git_status_codes() {
+# Function to retrieve Git status codes
+getGitStatusCodes() {
   git status --porcelain 2>/dev/null | sed -E 's/(^.{3}).*/\1/' | tr -d ' \n'
 }
 
-# Function to get git branch name
-__slavic_git_branch_name() {
+# Function to get the current Git branch name
+getGitBranchName() {
   git rev-parse --abbrev-ref HEAD 2>/dev/null
 }
 
-# Function to display a rainbow icon based on status
-__slavic_rainbow() {
-  if [[ "$1" == *"$3"* ]]; then
-    __slavic_color_echo "$2" "彡ミ"
-  fi
+# Function to display a status icon with color based on Git status
+displayStatusIcon() {
+  [[ "$1" == *"$3"* ]] && printWithColor "$2" "彡ミ"
 }
 
-# Function to display git status icons
-__slavic_git_status_icons() {
-  local git_status="$(__slavic_git_status_codes)"
+# Function to show Git status icons based on current Git status codes
+showGitStatusIcons() {
+  local gitStatus=$(getGitStatusCodes)
 
-  __slavic_rainbow "$git_status" "$__slavic_color_pink" 'D'
-  __slavic_rainbow "$git_status" "$__slavic_color_orange" 'R'
-  __slavic_rainbow "$git_status" "$__slavic_color_white" 'C'
-  __slavic_rainbow "$git_status" "$__slavic_color_green" 'A'
-  __slavic_rainbow "$git_status" "$__slavic_color_blue" 'U'
-  __slavic_rainbow "$git_status" "$__slavic_color_lilac" 'M'
-  __slavic_rainbow "$git_status" "$__slavic_color_grey" '?'
+  displayStatusIcon "$gitStatus" "$colorPink" 'D'   # Deleted files
+  displayStatusIcon "$gitStatus" "$colorOrange" 'R' # Renamed files
+  displayStatusIcon "$gitStatus" "$colorWhite" 'C'  # Copied files
+  displayStatusIcon "$gitStatus" "$colorGreen" 'A'  # Added files
+  displayStatusIcon "$gitStatus" "$colorBlue" 'U'   # Unmerged files
+  displayStatusIcon "$gitStatus" "$colorLilac" 'M'  # Modified files
+  displayStatusIcon "$gitStatus" "$colorGrey" '?'   # Untracked files
 }
 
-# Function to display git status
-__slavic_git_status() {
-  local branch_name="$(__slavic_git_branch_name)"
+# Function to display Git status in the prompt
+displayGitStatus() {
+  local branchName=$(getGitBranchName)
 
-  # Check if inside a git repository
-  if [[ -n "$branch_name" ]]; then
-    __slavic_color_echo "$__slavic_color_blue" " ☭ "
-    __slavic_color_echo "$__slavic_color_white" "$branch_name"
+  if [[ -n "$branchName" ]]; then
+    printWithColor "$colorBlue" " ☭ "
+    printWithColor "$colorWhite" "$branchName"
 
-    if [[ -n "$(__slavic_git_status_codes)" ]]; then
-      __slavic_color_echo "$__slavic_color_pink" ' ●'
-      __slavic_color_echo "$__slavic_color_white" ' (^._.^)ﾉ'
-      __slavic_git_status_icons
+    if [[ -n $(getGitStatusCodes) ]]; then
+      printWithColor "$colorPink" ' ●'
+      printWithColor "$colorWhite" ' (^._.^)ﾉ'
+      showGitStatusIcons
     else
-      __slavic_color_echo "$__slavic_color_green" ' ○'
+      printWithColor "$colorGreen" ' ○'
     fi
   fi
 }
 
-# Zsh mode prompt (similar to fish_mode_prompt)
-zsh_mode_prompt() {
-  printf "%b[" "$__slavic_color_lilac"
+# Function to show the mode prompt (emulates Fish shell mode prompt)
+showModePrompt() {
+  echo -n "$colorLilac["
   case $KEYMAP in
-    vicmd)
-      printf "%b" "%F{red}n"
-      ;;
-    main|viins)
-      printf "%b" "%F{green}i"
-      ;;
-    visual)
-      printf "%b" "%F{magenta}v"
-      ;;
-    *)
-      printf "%b" "%F{yellow}?"
-      ;;
+    vicmd) echo -n "%F{red}n" ;;   # Normal mode (Vim command mode)
+    viins) echo -n "%F{green}i" ;; # Insert mode (Vim insert mode)
+    main|*) echo -n "%F{green}i" ;; # Default to insert mode
   esac
-  printf "%b] " "$__slavic_color_lilac"
+  echo -n "$colorLilac]$colorReset "
 }
 
-# Main prompt function with proper line handling
-PROMPT='%{$(__slavic_color_echo "$__slavic_color_purple" "$(__slavic_current_folder)")%} '
-PROMPT+='$(__slavic_git_status)'
-PROMPT+='%E'  # End of line
-PROMPT+=$'\n'  # Add a proper newline
-PROMPT+='%{$(__slavic_color_echo "$__slavic_color_pink" "⫸ ")%} '
-PROMPT_EOL_MARK=""  # Disable end-of-line marker
-
+# Main prompt configuration
+PROMPT='%{$(printWithColor $colorPurple "$(getCurrentFolderName)")%}$(displayGitStatus)
+$(printWithColor $colorPink "'"$userSymbol  "'")'
 
