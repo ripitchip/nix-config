@@ -21,6 +21,7 @@ conform.setup({
 		yaml = { "prettierd" },
 
 		markdown = { "prettierd" },
+		vimwiki = { "prettierd" },
 		graphql = { "prettierd" },
 		lua = { "stylua" },
 		nix = { "nixfmt" },
