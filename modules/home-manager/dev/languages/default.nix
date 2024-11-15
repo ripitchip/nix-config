@@ -11,6 +11,7 @@
     ./csharp.nix
     ./arduino.nix
     ./markdown.nix
+    ./sqlite.nix
 
     ./selector.nix
   ];
