@@ -6,6 +6,6 @@
     ./media/moduleBundle.nix
     ./3d/moduleBundle.nix
     ./utility
-    ./school
+    ./network
   ];
 }
