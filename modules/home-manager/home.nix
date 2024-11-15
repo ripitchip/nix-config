@@ -6,7 +6,7 @@
 
   # Import additional modules
   imports = [
-    ./app/moduleBundle.nix
+    ./app
     ./local/moduleBundle.nix
     ./hardware
     ./dev/moduleBundle.nix
