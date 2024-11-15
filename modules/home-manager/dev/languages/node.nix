@@ -14,6 +14,7 @@
     home.packages = with pkgs; [
       nodejs_22
       prettierd
+      nodePackages.prettier
     ];
   };
 }
