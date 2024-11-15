@@ -7,6 +7,8 @@
       with pkgs.vscode-extensions;
       [
         ms-toolsai.jupyter
+        ms-toolsai.vscode-jupyter-slideshow
+        ms-toolsai.jupyter-renderers
         esbenp.prettier-vscode
         charliermarsh.ruff
         dbaeumer.vscode-eslint
