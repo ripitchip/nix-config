@@ -3,7 +3,7 @@
   imports = [
     ./terminal/moduleBundle.nix
     ./git/moduleBundle.nix
-    ./editor/moduleBundle.nix
+    ./editor
     ./languages
     ./utility
     ./shell
