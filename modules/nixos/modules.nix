@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}:
+{ ... }:
 {
 
   imports = [
@@ -11,5 +6,6 @@
     ./terminals/moduleBundle.nix
     ./hardware/moduleBundle.nix
     ./arduino.nix
+    ./games/steam.nix
   ];
 }
