@@ -12,3 +12,4 @@ vim.g.vimtex_compiler_latexmk = {
 		"-interaction=nonstopmode",
 	},
 }
+vim.g.vimtex_syntax_enabled = 0
