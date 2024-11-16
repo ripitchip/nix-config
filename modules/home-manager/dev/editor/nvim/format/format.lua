@@ -25,6 +25,7 @@ conform.setup({
 		graphql = { "prettierd" },
 		lua = { "stylua" },
 		nix = { "nixfmt" },
+		latex = { "latexindent" },
 	},
 	format_on_save = {
 		lsp_fallback = true,
