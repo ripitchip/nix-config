@@ -1,4 +1,7 @@
 { ... }:
 {
-  imports = [ ./hugo.nix ];
+  imports = [
+    ./hugo.nix
+    ./selector.nix
+  ];
 }

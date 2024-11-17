@@ -1,0 +1,4 @@
+{ ... }:
+{
+  hugo.enable = true;
+}
