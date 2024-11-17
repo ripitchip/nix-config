@@ -55,6 +55,7 @@
   nixpkgs.config.allowUnfree = true;
 
   dwm.enable = true;
+  steam.enable = true;
   WM.enable = true;
   pipewire.enable = true;
   # hardware.opengl = {
