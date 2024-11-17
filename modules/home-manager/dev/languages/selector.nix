@@ -11,4 +11,5 @@
   markdown.enable = true;
   sqlite.enable = true;
   java.enable = true;
+  go.enable = true;
 }

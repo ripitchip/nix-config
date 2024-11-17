@@ -13,6 +13,7 @@
     ./markdown.nix
     ./sqlite.nix
     ./java.nix
+    ./go.nix
 
     ./selector.nix
   ];
