@@ -44,6 +44,7 @@
             plugin = comment-nvim;
             config = toLua ''require("Comment").setup()'';
           }
+          vim-tmux-navigator
 
           # {
           #   plugin = copilot-vim;
