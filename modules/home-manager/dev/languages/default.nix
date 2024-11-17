@@ -12,6 +12,7 @@
     ./arduino.nix
     ./markdown.nix
     ./sqlite.nix
+    ./java.nix
 
     ./selector.nix
   ];
