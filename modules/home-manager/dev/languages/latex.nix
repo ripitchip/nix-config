@@ -15,6 +15,9 @@
       texliveFull
       # Formatter
       texlivePackages.latexindent
+      texlivePackages.lacheck
+      texlab
+      texlivePackages.chktex
       # Color for minted
       python311Packages.pylatexenc
       python311Packages.pygments

@@ -12,7 +12,8 @@
 
   config = lib.mkIf config.java.enable {
     home.packages = with pkgs; [
-      jdk
+      (pkgs.jdk.override { enableJavaFX = true; })
+      gradle
       kotlin
 
       #LSP
