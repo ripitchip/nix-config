@@ -10,5 +10,6 @@
     ./zoxide.nix
     ./fzf.nix
     ./steam-run.nix
+    ./oha.nix
   ];
 }

@@ -7,4 +7,5 @@
   zoxide.enable = true;
   fzf.enable = true;
   steam-run.enable = true;
+  oha.enable = true;
 }
