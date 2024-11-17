@@ -8,4 +8,6 @@
   fzf.enable = true;
   steam-run.enable = true;
   oha.enable = true;
+  clipmenu.enable = true;
+  picom.enable = true;
 }
