@@ -4,6 +4,7 @@
     nixpkgs.url = "github:NixOs/nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "github:NixOs/nixpkgs/nixos-unstable";
     nixpkgs-zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    # nixpkgs-zen-browser.url = "github:MarceColl/zen-browser-flake";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
