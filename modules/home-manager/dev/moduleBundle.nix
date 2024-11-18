@@ -8,5 +8,6 @@
     ./utility
     ./shell
     ./framework
+    ./kubernetes
   ];
 }
