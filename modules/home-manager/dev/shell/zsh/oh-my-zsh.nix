@@ -10,7 +10,13 @@
     dotDir = ".config/zsh";
     envExtra = "";
 
-    shellAliases = { };
+    shellAliases = {
+      ls = "lsd";
+      l = "ls -l";
+      la = "ls -a";
+      lla = "ls -la";
+      lt = "ls --tree";
+    };
     history = {
       size = 10000;
       path = "${config.xdg.configHome}/zsh/history";
@@ -34,8 +40,6 @@
         "navi"
         "rust"
         "tmuxinator"
-        "zsh-lsd"
-
       ];
       theme = "cat";
     };
