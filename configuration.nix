@@ -49,6 +49,7 @@
       "vboxusers"
       "docker"
       "dialout"
+      "disk"
     ];
   };
 
@@ -58,6 +59,7 @@
   steam.enable = true;
   WM.enable = true;
   pipewire.enable = true;
+  bluetooth.enable = true;
   # hardware.opengl = {
   #   enable = true;
   # };
