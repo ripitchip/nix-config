@@ -23,6 +23,7 @@
   # Enable various applications and utilities
   st.enable = true;
   nvim.enable = true;
+  kubectl.enable = true;
 
   # Let Home Manager manage itself
   programs.home-manager.enable = true;
