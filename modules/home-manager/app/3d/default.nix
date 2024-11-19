@@ -5,6 +5,7 @@
     ./freecad.nix
     ./openscad.nix
     ./kikad.nix
+    ./fritzing.nix
     ./selector.nix
   ];
 }
