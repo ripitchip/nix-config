@@ -12,7 +12,7 @@
   };
   config = lib.mkIf config.zen-browser.enable {
     home.packages =
-      [ pkgs-zen-browser.specific ]
+      [ pkgs-zen-browser.default ]
       ++ (with pkgs; [
         glib-networking
         gnome.adwaita-icon-theme
