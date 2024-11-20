@@ -19,18 +19,8 @@ static const char *colors[][3] = {
 };
 
 static const char *const autostart[] = {
-    "sh",
-    "/etc/screen/layout.sh",
-    NULL,
-    "feh",
-    "--scale-down",
-    "--bg-fill",
-    "/etc/images/banana.png",
-    NULL,
-    "picom",
-    "-b",
-    NULL,
-    NULL /* terminate */
+    "sh",        "/etc/screen/layout.sh",  NULL, "feh", "--scale-down",
+    "--bg-fill", "/etc/images/banana.png", NULL, NULL /* terminate */
 };
 
 /* tagging */
