@@ -13,7 +13,14 @@
   config = lib.mkIf config.kubectl.enable {
     home.packages = with pkgs-unstable; [
       kubectl
-      helm
+      (wrapHelm kubernetes-helm {
+        plugins = with pkgs.kubernetes-helmPlugins; [
+          helm-secrets
+          helm-diff
+          helm-s3
+          helm-git
+        ];
+      })
       k9s
     ];
   };
