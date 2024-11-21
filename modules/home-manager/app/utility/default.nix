@@ -7,5 +7,6 @@
     ./share/localsend.nix
     ./rpi-imager.nix
     ./mail
+    ./office
   ];
 }
