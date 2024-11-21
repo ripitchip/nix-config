@@ -10,4 +10,5 @@
   clipmenu.enable = true;
   picom.enable = true;
   nmap.enable = true;
+  traceroute.enable = true;
 }
