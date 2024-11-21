@@ -1,0 +1,4 @@
+{ ... }:
+{
+  imports = [ ./thunderbird.nix ];
+}
