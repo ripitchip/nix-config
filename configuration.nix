@@ -35,7 +35,8 @@
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
-    variant = "intl";
+    variant = "altgr-intl";
+    options = "caps:swapescape";
   };
 
   programs.zsh.enable = true;
@@ -50,6 +51,10 @@
       "docker"
       "dialout"
       "disk"
+      "kvm"
+      "adbusers"
+      "wireshark"
+      "storage"
     ];
   };
 
@@ -63,6 +68,7 @@
   # hardware.opengl = {
   #   enable = true;
   # };
+  services.udev.packages = [ pkgs.android-udev-rules ];
 
   system.stateVersion = "24.05"; # Did you read the comment?
   nix.settings.experimental-features = [
