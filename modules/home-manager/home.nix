@@ -24,7 +24,16 @@
   st.enable = true;
   nvim.enable = true;
   kubectl.enable = true;
-
+  xdg.userDirs = {
+    enable = true;
+    desktop = "$HOME/desktop";
+    download = "$HOME/downloads";
+    templates = "$HOME/templates";
+    documents = "$HOME/documents";
+    music = "$HOME/music";
+    pictures = "$HOME/images";
+    videos = "$HOME/videos";
+  };
   # Let Home Manager manage itself
   programs.home-manager.enable = true;
 
