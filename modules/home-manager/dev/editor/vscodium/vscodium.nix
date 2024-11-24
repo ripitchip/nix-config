@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   programs.vscode = {
     enable = true;
@@ -21,6 +21,7 @@
         ms-python.black-formatter
         unifiedjs.vscode-mdx
         yzhang.markdown-all-in-one
+        ms-vscode.cpptools
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
@@ -28,6 +29,12 @@
           publisher = "formulahendry";
           version = "0.5.5"; # Update to the latest version
           sha256 = "gtwKmCk9LcWtr+oJ7DUK+Zv1824aZdVOqkEe2YplE9I="; # lib.fakeSha256;
+        }
+        {
+          name = "platformio-ide";
+          publisher = "platformio";
+          version = "3.3.3"; # Update to the latest version
+          sha256 = "d8kwQVoG/MOujmvMaX6Y0wl85L2PNdv2EnqTZKo8pGk="; # lib.fakeSha256;
         }
         {
           name = "vs-code-prettier-eslint";
@@ -155,6 +162,7 @@
         "default" = "right";
         "jupyter-notebook" = "left";
       };
+      "platformio-ide.useBuiltinPIOCore" = false;
     };
   };
 }
