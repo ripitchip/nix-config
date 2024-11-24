@@ -20,9 +20,11 @@
         ruff
         black
 
+        virtualenv
         # Lsp
         python311Packages.python-lsp-server
         python311Packages.jedi-language-server
+        python311Packages.pip
       ])
       ++ (with pkgs-unstable; [ hatch ]);
   };
