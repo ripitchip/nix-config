@@ -18,6 +18,8 @@
     ./tools/theme.nix
     ./tools/markdown.nix
     ./tools/autopairs.nix
+    ./tools/platformio.nix
+    ./tools/remote.nix
 
     # Must stay at the very bottom
     ./nvim.nix
