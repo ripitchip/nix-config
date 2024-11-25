@@ -45,6 +45,10 @@
             config = toLua ''require("Comment").setup()'';
           }
           vim-tmux-navigator
+          openscad-nvim
+          fzf-vim
+          toggleterm-nvim
+          skim-vim
 
           # {
           #   plugin = copilot-vim;
