@@ -11,5 +11,6 @@
     nixfmt-rfc-style
     # lsp
     nil
+    nix-prefetch-git
   ];
 }
