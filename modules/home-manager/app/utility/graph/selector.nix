@@ -1,0 +1,5 @@
+{ ... }:
+
+{
+  drawio.enable = true;
+}
