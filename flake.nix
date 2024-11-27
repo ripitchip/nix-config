@@ -1,5 +1,6 @@
 {
   description = "Thomas Derudder Flakes";
+
   inputs = {
     nixpkgs.url = "github:NixOs/nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "github:NixOs/nixpkgs/nixos-unstable";
@@ -10,7 +11,10 @@
       url = "github:tadfisher/android-nixpkgs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    dream2nix.url = "github:nix-community/dream2nix";
+    dream2nix.inputs.nixpkgs.follows = "nixpkgs";
   };
+
   outputs =
     {
       nixpkgs,
@@ -18,6 +22,7 @@
       nixpkgs-zen-browser,
       home-manager,
       android-nixpkgs,
+      dream2nix,
       ...
     }:
     let
@@ -43,19 +48,18 @@
           modules = [ ./configuration.nix ];
           specialArgs = {
             inherit pkgs-unstable;
+            inherit dream2nix;
           };
         };
       };
       homeConfigurations = {
         thomas = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [
-            ./modules/home-manager/home.nix
-
-          ];
+          modules = [ ./modules/home-manager/home.nix ];
           extraSpecialArgs = {
             inherit pkgs-unstable;
             inherit pkgs-zen-browser;
+            inherit dream2nix;
           };
         };
       };

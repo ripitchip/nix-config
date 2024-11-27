@@ -51,7 +51,7 @@
     xserver = {
       videoDrivers = [
         "amdgpu"
-        "nvidia" # 👈 ENABLE NVIDIA
+        # "nvidia" # 👈 ENABLE NVIDIA
       ];
     };
     asusd = {

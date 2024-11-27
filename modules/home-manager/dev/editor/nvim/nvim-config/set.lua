@@ -30,3 +30,6 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 -- vim.g.copilot_enabled = 1
+vim.g.openscad_fuzzy_finder = "fzf"
+vim.g.openscad_auto_open = true
+vim.g.openscad_exec_openscad_trig_key = "<leader>o"

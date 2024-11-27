@@ -8,5 +8,6 @@
     ./rpi-imager.nix
     ./mail
     ./office
+    ./graph
   ];
 }
