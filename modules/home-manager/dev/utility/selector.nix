@@ -1,6 +1,7 @@
 { ... }:
 {
   lshw.enable = true;
+  argocd.enable = true;
   lsd.enable = true;
   vagrant.enable = true;
   zoxide.enable = true;

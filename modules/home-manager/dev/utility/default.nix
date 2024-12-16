@@ -9,5 +9,6 @@
     ./cli-utils
     ./network
     ./monitoring
+    ./argocd.nix
   ];
 }
