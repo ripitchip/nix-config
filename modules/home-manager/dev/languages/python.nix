@@ -25,6 +25,7 @@
         python311Packages.python-lsp-server
         python311Packages.jedi-language-server
         python311Packages.pip
+        python312Packages.pyzmq
       ])
       ++ (with pkgs-unstable; [ hatch ]);
   };

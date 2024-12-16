@@ -12,4 +12,5 @@
   sqlite.enable = true;
   java.enable = true;
   go.enable = true;
+  flutter.enable = true;
 }

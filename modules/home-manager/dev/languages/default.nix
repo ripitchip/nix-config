@@ -14,6 +14,8 @@
     ./sqlite.nix
     ./java.nix
     ./go.nix
+    ./nim.nix
+    ./flutter.nix
 
     ./selector.nix
   ];
