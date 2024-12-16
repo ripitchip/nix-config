@@ -15,7 +15,7 @@
             owner = "anurag3301";
             repo = "nvim-platformio.lua";
             rev = "main";
-            sha256 = "NMyuYoUC+WkXZH4d6ApOd4Kv8ppQd4/5VVhDb8e2hGs=";
+            sha256 = "IUMVi1S8gyWFbcluYyRb3hVrvxQdy7salfbkVpYfvEw=";
           };
         })
       ];
