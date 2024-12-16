@@ -9,7 +9,8 @@
   environment.systemPackages = with pkgs; [ virtualbox ];
   virtualisation.docker.enable = true;
   environment.etc."vbox/networks.conf".text = ''
-    * 0.0.0.0/0 ::/0
+    * 10.0.0.0/8 192.168.0.0/16
+    * 2001::/64
   '';
   networking.firewall.enable = false;
 }
