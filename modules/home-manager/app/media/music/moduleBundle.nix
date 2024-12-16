@@ -1,4 +1,7 @@
 { ... }:
 {
-  imports = [ ./mpd.nix ];
+  imports = [
+    ./mpd.nix
+    ./vlc.nix
+  ];
 }
